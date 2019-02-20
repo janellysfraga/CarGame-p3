@@ -1,5 +1,5 @@
 //VARIABLES
-let car ={
+let car = {
     make: 'Lexus',
     model: 'ES',
     color: 'white',
@@ -21,13 +21,14 @@ let car ={
 },
 
 getTuneUp() {
-    alert(`Car is fixed and ready to go!`)
+    alert(`Car is fixed and ready to go!`);
     this.isWorking = true;
 },
 
 honk() {
     alert(`Honk! Honk!`);
 }
+};
 
 //FUNCTIONS
 //logs all of our car's current stats to the console
@@ -39,10 +40,11 @@ const reWriteStats = () => {
     console.log(`Is Working: ${car.isWorking}`);
     console.log(`------------------------`);
 }
+}
 
 //MAIN PROCESS
-/*Captures keyboard input. Depending on the letter pressed it
-will "call" (execute) dofferent functions */
+//Captures keyboard input. Depending on the letter pressed it
+//will "call" (execute) dofferent functions 
 document.onkeyup = (event) => {
 
     //Captures the key press, converts it to lowercase, and saves it to a variable
@@ -59,3 +61,9 @@ document.onkeyup = (event) => {
         car.getTuneUp();
         reWriteStats();
     }
+    if(letter === 'd'){
+        car.driveToWork();
+        reWriteStats();
+    }
+
+
